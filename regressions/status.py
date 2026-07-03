@@ -4,6 +4,13 @@ Fully derived from ground truth (regression_suite.py). No stored blocked
 items — every invocation recomputes from current baselines + experiment
 outputs.
 
+AUTHORITATIVENESS RULE:
+  Every status label (blocked, fixed, pending, regression) MUST trace to one of:
+    1. regression_suite.py output   — ground truth test results
+    2. status.py computation        — derived from the suite output
+    3. commit-pinned artifact       — persistent file with specific commit hash
+  Anything else must be explicitly labeled "non-authoritative interpretation".
+
 Usage:
     python regressions/status.py              # print human-readable status
     python regressions/status.py --json        # machine-readable JSON

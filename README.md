@@ -53,6 +53,18 @@ python run_all.py --seed 42
 - numpy, matplotlib (for visualizations)
 - Standard library only for CSV/metrics output
 
+## Status Convention
+
+Every status label (blocked, fixed, pending, regression) MUST trace to one of:
+
+1. **`regressions/regression_suite.py` output** — ground truth test results
+2. **`regressions/status.py` computation** — derived from suite output
+3. **commit-pinned artifact** — persistent file with specific commit hash
+
+Anything else must be explicitly labeled "non-authoritative interpretation".
+
+Run `python regressions/status.py` to see current derived project status.
+
 ## Experiment Lifecycle
 
 1. **Hypothesis** — State a falsifiable claim

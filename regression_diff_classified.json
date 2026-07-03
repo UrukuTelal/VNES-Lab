@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-07-03T04:41:05Z",
+  "timestamp": "2026-07-03T04:41:37Z",
   "baselines": {
     "001_homeostasis": {
-      "status": "STABLE",
+      "status": "CHANGED",
       "provenance": {
         "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
         "git_dirty": true,
@@ -96,7 +96,7 @@
           "tolerance": 0.1519781706162828,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.3_R0.9": {
           "name": "drift_A0.3_R0.9",
@@ -107,7 +107,7 @@
           "tolerance": 0.14885037051876046,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.4_R0.1": {
           "name": "drift_A0.4_R0.1",
@@ -184,7 +184,7 @@
           "tolerance": 0.07459249240837693,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.6_R0.5": {
           "name": "drift_A0.6_R0.5",
@@ -195,7 +195,7 @@
           "tolerance": 0.06833689221333265,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.6_R0.9": {
           "name": "drift_A0.6_R0.9",
@@ -206,7 +206,7 @@
           "tolerance": 0.06208129201828824,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.7_R0.1": {
           "name": "drift_A0.7_R0.1",
@@ -217,7 +217,7 @@
           "tolerance": 0.047754666306567446,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.7_R0.5": {
           "name": "drift_A0.7_R0.5",
@@ -228,7 +228,7 @@
           "tolerance": 0.04045646607901573,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.7_R0.9": {
           "name": "drift_A0.7_R0.9",
@@ -239,7 +239,7 @@
           "tolerance": 0.033158265851463975,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.8_R0.1": {
           "name": "drift_A0.8_R0.1",
@@ -250,7 +250,7 @@
           "tolerance": 0.020916840204757804,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.8_R0.5": {
           "name": "drift_A0.8_R0.5",
@@ -261,7 +261,7 @@
           "tolerance": 0.01257603994469877,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.8_R0.9": {
           "name": "drift_A0.8_R0.9",
@@ -272,7 +272,7 @@
           "tolerance": 0.01,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.9_R0.1": {
           "name": "drift_A0.9_R0.1",
@@ -283,7 +283,7 @@
           "tolerance": 0.01,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.9_R0.5": {
           "name": "drift_A0.9_R0.5",
@@ -294,7 +294,7 @@
           "tolerance": 0.015304386189618257,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A0.9_R0.9": {
           "name": "drift_A0.9_R0.9",
@@ -305,7 +305,7 @@
           "tolerance": 0.02468778648218477,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A1.0_R0.1": {
           "name": "drift_A1.0_R0.1",
@@ -316,7 +316,7 @@
           "tolerance": 0.03275881199886129,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A1.0_R0.5": {
           "name": "drift_A1.0_R0.5",
@@ -327,7 +327,7 @@
           "tolerance": 0.043184812323935215,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "drift_A1.0_R0.9": {
           "name": "drift_A1.0_R0.9",
@@ -338,7 +338,7 @@
           "tolerance": 0.053610812649009076,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "overshoot_diff_R0.1_A0.2": {
           "name": "overshoot_diff_R0.1_A0.2",
@@ -360,7 +360,7 @@
           "tolerance": 0.0005,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "overshoot_diff_R0.1_A0.4": {
           "name": "overshoot_diff_R0.1_A0.4",
@@ -371,7 +371,7 @@
           "tolerance": 0.0005,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "overshoot_diff_R0.1_A0.5": {
           "name": "overshoot_diff_R0.1_A0.5",
@@ -459,7 +459,7 @@
           "tolerance": 0.0005,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "overshoot_diff_R0.5_A0.4": {
           "name": "overshoot_diff_R0.5_A0.4",
@@ -470,7 +470,7 @@
           "tolerance": 0.0005,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "overshoot_diff_R0.5_A0.5": {
           "name": "overshoot_diff_R0.5_A0.5",
@@ -569,7 +569,7 @@
           "tolerance": 0.0005,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "overshoot_diff_R0.9_A0.5": {
           "name": "overshoot_diff_R0.9_A0.5",
@@ -640,13 +640,13 @@
       },
       "summary": {
         "stable": 35,
-        "changed": 0,
+        "changed": 22,
         "regression": 0,
         "pending": 22
       }
     },
     "002_navigation": {
-      "status": "STABLE",
+      "status": "CHANGED",
       "provenance": {
         "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
         "git_dirty": true,
@@ -663,7 +663,7 @@
           "tolerance": 20.3475,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "converge_time_Flux0.3": {
           "name": "converge_time_Flux0.3",
@@ -674,7 +674,7 @@
           "tolerance": 9.862499999999999,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "converge_time_Flux0.5": {
           "name": "converge_time_Flux0.5",
@@ -685,7 +685,7 @@
           "tolerance": 6.3525,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "converge_time_Flux0.7": {
           "name": "converge_time_Flux0.7",
@@ -696,7 +696,7 @@
           "tolerance": 5.0,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "converge_time_Flux0.9": {
           "name": "converge_time_Flux0.9",
@@ -707,7 +707,7 @@
           "tolerance": 5.0,
           "comparator": "approx",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         },
         "max_final_error": {
           "name": "max_final_error",
@@ -718,12 +718,12 @@
           "tolerance": 1e-14,
           "comparator": "lt",
           "passed": false,
-          "classification": "PENDING"
+          "classification": "CHANGED"
         }
       },
       "summary": {
         "stable": 0,
-        "changed": 0,
+        "changed": 6,
         "regression": 0,
         "pending": 6
       }
@@ -2791,10 +2791,10 @@
   },
   "summary": {
     "stable": 213,
-    "changed": 0,
+    "changed": 28,
     "regression": 0,
     "error": 0,
-    "pending": 28,
+    "pending": 0,
     "total": 241
   }
 }

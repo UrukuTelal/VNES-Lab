@@ -1,0 +1,63 @@
+{
+  "baseline_version": 1,
+  "experiment": "002_navigation",
+  "generated": "2026-07-03T04:32:50Z",
+  "generator_version": "1.0",
+  "provenance": {
+    "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
+    "git_dirty": true,
+    "random_seed": 42,
+    "hostname": "unknown"
+  },
+  "metric_count": 6,
+  "metrics": [
+    {
+      "name": "converge_time_Flux0.1",
+      "value": 135.65,
+      "tolerance": 20.3475,
+      "comparator": "approx",
+      "description": "Mean convergence time at Flux=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "converge_time_Flux0.3",
+      "value": 65.75,
+      "tolerance": 9.862499999999999,
+      "comparator": "approx",
+      "description": "Mean convergence time at Flux=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "converge_time_Flux0.5",
+      "value": 42.35,
+      "tolerance": 6.3525,
+      "comparator": "approx",
+      "description": "Mean convergence time at Flux=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "converge_time_Flux0.7",
+      "value": 31.35,
+      "tolerance": 5.0,
+      "comparator": "approx",
+      "description": "Mean convergence time at Flux=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "converge_time_Flux0.9",
+      "value": 24.05,
+      "tolerance": 5.0,
+      "comparator": "approx",
+      "description": "Mean convergence time at Flux=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "max_final_error",
+      "value": 8.929e-09,
+      "tolerance": 1e-14,
+      "comparator": "lt",
+      "description": "Maximum final error across all trials",
+      "unit": "distance"
+    }
+  ]
+}
