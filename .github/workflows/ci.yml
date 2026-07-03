@@ -1,11 +1,14 @@
-# CI for VNES-Lab — final arbiter of all status claims.
+# CI for VNES-Lab — external verification oracle for ground truth execution.
 #
-# Every blocked / fixed / pending / regression label must be
-# traceable to this pipeline's output. If CI passes, claims are
-# authoritative. If CI fails, all contradictory claims are invalid
-# regardless of their source.
+# CI is NOT a higher truth layer. It is a second independent instantiation
+# of the same ground truth computation (regression_suite.py) in an isolated
+# environment. It proves reproducibility, not ontological authority.
 #
-# Run on every push and PR. The regression suite exit code IS the verdict.
+# Every blocked / fixed / pending / regression label must be traceable to
+# regression_suite.py or status.py (derived from suite). CI independently
+# verifies that derivation. If CI passes, the suite output is validated.
+# If CI fails, suite output is suspect — but CI itself can be stale,
+# misconfigured, or environment-affected.
 
 name: VNES-Lab Regression Suite
 

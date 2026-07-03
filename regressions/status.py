@@ -4,12 +4,21 @@ Fully derived from ground truth (regression_suite.py). No stored blocked
 items — every invocation recomputes from current baselines + experiment
 outputs.
 
-AUTHORITATIVENESS RULE:
-  Every status label (blocked, fixed, pending, regression) MUST trace to one of:
-    1. regression_suite.py output   — ground truth test results
-    2. status.py computation        — derived from the suite output
-    3. commit-pinned artifact       — persistent file with specific commit hash
-  Anything else must be explicitly labeled "non-authoritative interpretation".
+AUTHORITATIVENESS HIERARCHY (tight version):
+
+  Level  Role              Description
+  5      External verifier CI reruns ground truth in isolated environment
+  4      Ground truth      regression_suite.py (canonical logic)
+  3      Derived truth     status.py (pure function over Level 4 output)
+  2      Persistence       commit-pinned artifacts (historical snapshots)
+  1      Interpretation    agent narratives (non-authoritative)
+
+  Every status label (blocked, fixed, pending, regression) MUST trace to
+  one of Levels 2-4. Anything at Level 1 must be explicitly labeled
+  "non-authoritative interpretation". Level 5 (CI) is NOT a higher truth
+  layer — it is an independent verification oracle for Level 4 execution.
+  CI can be stale, misconfigured, or environment-affected; it proves
+  reproducibility, not ontology.
 
 Usage:
     python regressions/status.py              # print human-readable status

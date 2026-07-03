@@ -57,11 +57,16 @@ python run_all.py --seed 42
 
 Every status label (blocked, fixed, pending, regression) MUST trace to one of:
 
-1. **`regressions/regression_suite.py` output** — ground truth test results
-2. **`regressions/status.py` computation** — derived from suite output
-3. **commit-pinned artifact** — persistent file with specific commit hash
+| Level | Role | Description |
+|-------|------|-------------|
+| 5 | External verifier | CI reruns ground truth in isolated environment (NOT a higher truth layer — proves reproducibility, not ontology) |
+| 4 | Ground truth | `regressions/regression_suite.py` (canonical logic) |
+| 3 | Derived truth | `regressions/status.py` (pure function over Level 4 output) |
+| 2 | Persistence | commit-pinned artifacts (historical snapshots) |
+| 1 | Interpretation | agent narratives — must be labeled "non-authoritative interpretation" |
 
-Anything else must be explicitly labeled "non-authoritative interpretation".
+Anything at Level 1 must be explicitly labeled as non-authoritative.
+Level 5 (CI) is an independent verification oracle, not a superior truth layer.
 
 Run `python regressions/status.py` to see current derived project status.
 
