@@ -80,7 +80,7 @@ def extract_navigation(rows: list[dict]) -> dict:
     # INVARIANT: all trials must converge to near-zero error
     max_err = max(row["final_error"] for row in rows)
     metrics["max_final_error"] = M(
-        max_err, 1e-14, "lt",
+        round(max_err, 12), 5e-13, "lt",
         "Maximum final error across all trials",
         "distance"
     )

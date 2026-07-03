@@ -1,10 +1,10 @@
 {
   "baseline_version": 1,
   "experiment": "005_multi_agent",
-  "generated": "2026-07-03T04:32:50Z",
+  "generated": "2026-07-03T04:44:22Z",
   "generator_version": "1.0",
   "provenance": {
-    "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
+    "git_commit": "01d119e623b7f3f68b26e4e2758f9b2ee0010281",
     "git_dirty": true,
     "random_seed": 42,
     "hostname": "unknown"
@@ -13,10 +13,10 @@
   "metrics": [
     {
       "name": "energy_C0_gte_C0.1",
-      "value": 0.572465582298,
+      "value": 0.575863479238,
       "tolerance": 1e-10,
       "comparator": "gte",
-      "description": "Energy transfer: C=0 (0.8058) >= C=0.1 (0.2333)",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.1 (0.2299)",
       "unit": "boolean",
       "threshold": 0.0
     },
@@ -124,7 +124,7 @@
     },
     {
       "name": "sync_C0.1_W0.0",
-      "value": 0.858978569011,
+      "value": 0.862851944685,
       "tolerance": 0.01,
       "comparator": "approx",
       "description": "Sync index at coupling=0.1, willpower_diff=0.0",
@@ -132,7 +132,7 @@
     },
     {
       "name": "sync_C0.1_W0.1",
-      "value": 0.859022462893,
+      "value": 0.862894902687,
       "tolerance": 0.01,
       "comparator": "approx",
       "description": "Sync index at coupling=0.1, willpower_diff=0.1",
@@ -140,7 +140,7 @@
     },
     {
       "name": "sync_C0.1_W0.2",
-      "value": 0.859087695584,
+      "value": 0.862958729278,
       "tolerance": 0.01,
       "comparator": "approx",
       "description": "Sync index at coupling=0.1, willpower_diff=0.2",
@@ -148,7 +148,7 @@
     },
     {
       "name": "sync_C0.1_W0.3",
-      "value": 0.859174207728,
+      "value": 0.863043366075,
       "tolerance": 0.01,
       "comparator": "approx",
       "description": "Sync index at coupling=0.1, willpower_diff=0.3",
@@ -156,7 +156,7 @@
     },
     {
       "name": "sync_C0.1_W0.4",
-      "value": 0.859281920749,
+      "value": 0.863148735791,
       "tolerance": 0.01,
       "comparator": "approx",
       "description": "Sync index at coupling=0.1, willpower_diff=0.4",
@@ -164,7 +164,7 @@
     },
     {
       "name": "sync_C0.1_W0.5",
-      "value": 0.859410737023,
+      "value": 0.863274742417,
       "tolerance": 0.01,
       "comparator": "approx",
       "description": "Sync index at coupling=0.1, willpower_diff=0.5",

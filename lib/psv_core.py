@@ -55,8 +55,13 @@ class PillarState:
     def copy(self) -> "PillarState":
         return PillarState(theta=self.theta[:], phi=self.phi[:])
 
-    def clamp(self):
+    def clamp(self, soft: bool = True):
         for i in range(NUM_PILLARS):
+            # Soft boundary damping before hard clamp
+            if soft and self.theta[i] > PI * 0.95:
+                self.theta[i] -= (self.theta[i] - PI * 0.95) * 0.25
+            elif soft and self.theta[i] < 0.05:
+                self.theta[i] += (0.05 - self.theta[i]) * 0.25
             self.theta[i] = max(0.0, min(PI, self.theta[i]))
             self.phi[i] = self.phi[i] % TAU
 
@@ -247,7 +252,12 @@ class HopfPID:
         for i in range(NUM_PILLARS):
             error = target.theta[i] - current.theta[i]
             self.integral[i] += error * dt
+            # Anti-windup: clamp integral to prevent overshoot buildup
+            max_integral = PI / max(self.ki, 1e-12)
+            self.integral[i] = max(-max_integral, min(max_integral, self.integral[i]))
             derivative = (error - self.prev_error[i]) / max(dt, 1e-12)
+            # Low-pass filter on derivative to reduce noise amplification
+            derivative *= 0.7
             output = self.kp * error + self.ki * self.integral[i] + self.kd * derivative
             correction.theta[i] += output * dt
             self.prev_error[i] = error

@@ -1,10 +1,10 @@
 {
   "baseline_version": 1,
   "experiment": "006_self_repair",
-  "generated": "2026-07-03T04:32:50Z",
+  "generated": "2026-07-03T04:44:22Z",
   "generator_version": "1.0",
   "provenance": {
-    "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
+    "git_commit": "01d119e623b7f3f68b26e4e2758f9b2ee0010281",
     "git_dirty": true,
     "random_seed": 42,
     "hostname": "unknown"
@@ -46,8 +46,8 @@
     },
     {
       "name": "recovery_time_D0.05_H0.7",
-      "value": 240.0,
-      "tolerance": 72.0,
+      "value": 239.0,
+      "tolerance": 71.7,
       "comparator": "approx",
       "description": "Recovery time at depth=0.05, harm=0.7",
       "unit": "steps"
@@ -358,24 +358,24 @@
     },
     {
       "name": "residual_D0.05_H0.5",
-      "value": 7.1899505e-05,
-      "tolerance": 3.5949752268463896e-05,
+      "value": 7.1899486e-05,
+      "tolerance": 3.594974320978083e-05,
       "comparator": "approx",
       "description": "Residual error at depth=0.05, harm=0.5",
       "unit": "distance"
     },
     {
       "name": "residual_D0.05_H0.7",
-      "value": 0.000104920747,
-      "tolerance": 5.2460373677779064e-05,
+      "value": 0.000104455377,
+      "tolerance": 5.2227688449442995e-05,
       "comparator": "approx",
       "description": "Residual error at depth=0.05, harm=0.7",
       "unit": "distance"
     },
     {
       "name": "residual_D0.05_H0.9",
-      "value": 2.0719716e-05,
-      "tolerance": 1.0359857927875528e-05,
+      "value": 2.0719653e-05,
+      "tolerance": 1.0359826493287595e-05,
       "comparator": "approx",
       "description": "Residual error at depth=0.05, harm=0.9",
       "unit": "distance"
@@ -454,8 +454,8 @@
     },
     {
       "name": "residual_D0.1_H0.9",
-      "value": 7.151599e-05,
-      "tolerance": 3.5757995142776116e-05,
+      "value": 7.1516009e-05,
+      "tolerance": 3.575800440640252e-05,
       "comparator": "approx",
       "description": "Residual error at depth=0.1, harm=0.9",
       "unit": "distance"

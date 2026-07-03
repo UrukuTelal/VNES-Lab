@@ -1,10 +1,10 @@
 {
   "baseline_version": 1,
   "experiment": "008_emergence",
-  "generated": "2026-07-03T04:32:50Z",
+  "generated": "2026-07-03T04:44:22Z",
   "generator_version": "1.0",
   "provenance": {
-    "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
+    "git_commit": "01d119e623b7f3f68b26e4e2758f9b2ee0010281",
     "git_dirty": true,
     "random_seed": 42,
     "hostname": "unknown"
@@ -45,7 +45,7 @@
     },
     {
       "name": "intra_inter_ratio_P10",
-      "value": 1.013431399975,
+      "value": 1.015948905727,
       "tolerance": 0.1,
       "comparator": "approx",
       "description": "Intra/inter similarity ratio at population=10",
@@ -53,7 +53,7 @@
     },
     {
       "name": "intra_inter_ratio_P100",
-      "value": 1.047191964353,
+      "value": 1.046846999669,
       "tolerance": 0.1,
       "comparator": "approx",
       "description": "Intra/inter similarity ratio at population=100",
@@ -61,7 +61,7 @@
     },
     {
       "name": "intra_inter_ratio_P20",
-      "value": 1.042624669791,
+      "value": 1.044119226029,
       "tolerance": 0.1,
       "comparator": "approx",
       "description": "Intra/inter similarity ratio at population=20",
@@ -69,7 +69,7 @@
     },
     {
       "name": "intra_inter_ratio_P50",
-      "value": 1.036484217747,
+      "value": 1.037685962225,
       "tolerance": 0.1,
       "comparator": "approx",
       "description": "Intra/inter similarity ratio at population=50",
@@ -77,7 +77,7 @@
     },
     {
       "name": "modularity_P10",
-      "value": 0.203189266938,
+      "value": 0.203779514083,
       "tolerance": 0.05,
       "comparator": "approx",
       "description": "Modularity at population=10",
@@ -85,7 +85,7 @@
     },
     {
       "name": "modularity_P100",
-      "value": 0.415568433493,
+      "value": 0.415542177538,
       "tolerance": 0.05,
       "comparator": "approx",
       "description": "Modularity at population=100",
@@ -93,7 +93,7 @@
     },
     {
       "name": "modularity_P20",
-      "value": 0.355541737176,
+      "value": 0.355728627176,
       "tolerance": 0.05,
       "comparator": "approx",
       "description": "Modularity at population=20",
@@ -101,7 +101,7 @@
     },
     {
       "name": "modularity_P50",
-      "value": 0.442030377284,
+      "value": 0.4420949203,
       "tolerance": 0.05,
       "comparator": "approx",
       "description": "Modularity at population=50",

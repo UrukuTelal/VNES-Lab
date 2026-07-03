@@ -1,10 +1,10 @@
 {
   "baseline_version": 1,
   "experiment": "007_tool_use",
-  "generated": "2026-07-03T04:32:50Z",
+  "generated": "2026-07-03T04:44:22Z",
   "generator_version": "1.0",
   "provenance": {
-    "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
+    "git_commit": "01d119e623b7f3f68b26e4e2758f9b2ee0010281",
     "git_dirty": true,
     "random_seed": 42,
     "hostname": "unknown"
@@ -61,64 +61,64 @@
     },
     {
       "name": "efficiency_A0.5_R0.1",
-      "value": 1.505464794344,
-      "tolerance": 0.15054647943436572,
+      "value": 1.557165850742,
+      "tolerance": 0.15571658507422553,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.5, resistance=0.1",
       "unit": "ratio"
     },
     {
       "name": "efficiency_A0.5_R0.3",
-      "value": 1.16922703229,
-      "tolerance": 0.11692270322898356,
+      "value": 1.207536592008,
+      "tolerance": 0.12075365920083199,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.5, resistance=0.3",
       "unit": "ratio"
     },
     {
       "name": "efficiency_A0.5_R0.5",
-      "value": 0.836435821951,
-      "tolerance": 0.08364358219514612,
+      "value": 0.865740763367,
+      "tolerance": 0.08657407633671277,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.5, resistance=0.5",
       "unit": "ratio"
     },
     {
       "name": "efficiency_A0.7_R0.1",
-      "value": 1.844833398313,
-      "tolerance": 0.1844833398313387,
+      "value": 1.765942209366,
+      "tolerance": 0.17659422093663674,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.7, resistance=0.1",
       "unit": "ratio"
     },
     {
       "name": "efficiency_A0.7_R0.3",
-      "value": 1.439599362434,
-      "tolerance": 0.1439599362434205,
+      "value": 1.454485810476,
+      "tolerance": 0.14544858104764932,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.7, resistance=0.3",
       "unit": "ratio"
     },
     {
       "name": "efficiency_A0.7_R0.5",
-      "value": 1.02968271538,
-      "tolerance": 0.10296827153801957,
+      "value": 1.039872416742,
+      "tolerance": 0.103987241674248,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.7, resistance=0.5",
       "unit": "ratio"
     },
     {
       "name": "efficiency_A0.9_R0.1",
-      "value": 1.653347241043,
-      "tolerance": 0.16533472410426883,
+      "value": 1.614241537654,
+      "tolerance": 0.16142415376543195,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.9, resistance=0.1",
       "unit": "ratio"
     },
     {
       "name": "efficiency_A0.9_R0.3",
-      "value": 1.653894172362,
-      "tolerance": 0.16538941723622624,
+      "value": 1.564995965163,
+      "tolerance": 0.15649959651625056,
       "comparator": "approx",
       "description": "Mean efficiency at awareness=0.9, resistance=0.3",
       "unit": "ratio"

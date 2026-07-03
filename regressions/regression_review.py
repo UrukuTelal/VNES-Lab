@@ -54,7 +54,7 @@ def run_diff() -> dict:
     diff = {
         "timestamp": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         "baselines": {},
-        "summary": {"stable": 0, "changed": 0, "regression": 0, "error": 0},
+        "summary": {"stable": 0, "changed": 0, "regression": 0, "error": 0, "pending": 0},
     }
 
     for name in sorted(EXPERIMENTS.keys()):
@@ -70,7 +70,7 @@ def run_diff() -> dict:
         current = extractor(rows)
 
         exp = {"status": "STABLE", "provenance": baseline.get("provenance", {}),
-               "metrics": {}, "summary": {"stable": 0, "changed": 0, "regression": 0}}
+               "metrics": {}, "summary": {"stable": 0, "changed": 0, "regression": 0, "pending": 0}}
 
         for entry in baseline["metrics"]:
             mname = entry["name"]
@@ -89,10 +89,12 @@ def run_diff() -> dict:
             exp["status"] = "CHANGED"
 
         diff["baselines"][name] = exp
-        for k in ("stable", "changed", "regression"):
+        for k in ("stable", "changed", "regression", "pending"):
             diff["summary"][k] += exp["summary"][k]
 
-    diff["summary"]["total"] = sum(diff["summary"][k] for k in ("stable", "changed", "regression"))
+    for k in ("stable", "changed", "regression", "pending"):
+        diff["summary"][k] = diff["summary"].get(k, 0)
+    diff["summary"]["total"] = sum(diff["summary"][k] for k in ("stable", "changed", "regression", "pending"))
     return diff
 
 
@@ -106,8 +108,9 @@ def classify_changed(diff: dict, name: str, metric_names: list[str]):
         if m and m["classification"] == "PENDING":
             m["classification"] = "CHANGED"
             exp["summary"]["changed"] += 1
+            exp["summary"]["pending"] -= 1
             diff["summary"]["changed"] += 1
-            diff["summary"]["regression"] -= 1
+            diff["summary"]["pending"] -= 1
     # Recompute experiment status
     if exp["summary"]["regression"] <= 0:
         exp["status"] = "CHANGED" if exp["summary"]["changed"] > 0 else "STABLE"
@@ -127,13 +130,15 @@ def print_diff(diff: dict):
             print(f"       baseline commit: {prov['git_commit'][:12]}"
                   f"{' (DIRTY)' if prov.get('git_dirty') else ''}")
         es = exp["summary"]
-        if es["regression"] == 0 and es["changed"] == 0:
-            print(f"       {es['stable']}/{es['stable']+es['changed']+es['regression']} stable")
+        total_m = es["stable"] + es["changed"] + es["regression"] + es["pending"]
+        if es["regression"] == 0 and es["changed"] == 0 and es["pending"] == 0:
+            print(f"       {es['stable']}/{total_m} stable")
             continue
 
-        print(f"       {es['stable']} stable, {es['changed']} changed, {es['regression']} regressions")
+        print(f"       {es['stable']} stable, {es['changed']} changed, {es['regression']} regressions, {es['pending']} pending")
+
         for mname, m in exp["metrics"].items():
-            if m.get("classification") in ("CHANGED", "REGRESSION") or m.get("status") == "ERROR":
+            if m.get("classification") in ("CHANGED", "REGRESSION", "PENDING") or m.get("status") == "ERROR":
                 cls = m.get("classification", "ERROR")
                 drift = m.get("drift", 0)
                 desc = m.get("name", mname)

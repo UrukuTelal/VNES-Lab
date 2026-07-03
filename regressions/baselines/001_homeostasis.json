@@ -1,10 +1,10 @@
 {
   "baseline_version": 1,
   "experiment": "001_homeostasis",
-  "generated": "2026-07-03T04:32:50Z",
+  "generated": "2026-07-03T04:44:22Z",
   "generator_version": "1.0",
   "provenance": {
-    "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
+    "git_commit": "01d119e623b7f3f68b26e4e2758f9b2ee0010281",
     "git_dirty": true,
     "random_seed": 42,
     "hostname": "unknown"
@@ -37,167 +37,167 @@
     },
     {
       "name": "drift_A0.2_R0.1",
-      "value": 1.212958645437,
-      "tolerance": 0.1819437968156146,
+      "value": 1.057719436528,
+      "tolerance": 0.15865791547923463,
       "comparator": "approx",
       "description": "Drift at amplitude=0.2, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.2_R0.5",
-      "value": 1.199057311671,
-      "tolerance": 0.17985859675059976,
+      "value": 1.043198482254,
+      "tolerance": 0.15647977233807478,
       "comparator": "approx",
       "description": "Drift at amplitude=0.2, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.2_R0.9",
-      "value": 1.185155977904,
-      "tolerance": 0.17777339668558526,
+      "value": 1.028443101582,
+      "tolerance": 0.15426646523728033,
       "comparator": "approx",
       "description": "Drift at amplitude=0.2, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "drift_A0.3_R0.1",
-      "value": 1.034039804759,
-      "tolerance": 0.155105970713805,
+      "value": 0.879649086028,
+      "tolerance": 0.13194736290415948,
       "comparator": "approx",
       "description": "Drift at amplitude=0.3, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.3_R0.5",
-      "value": 1.013187804109,
-      "tolerance": 0.1519781706162828,
+      "value": 0.857898773126,
+      "tolerance": 0.12868481596886797,
       "comparator": "approx",
       "description": "Drift at amplitude=0.3, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.3_R0.9",
-      "value": 0.992335803458,
-      "tolerance": 0.14885037051876046,
+      "value": 0.835786307074,
+      "tolerance": 0.12536794606102888,
       "comparator": "approx",
       "description": "Drift at amplitude=0.3, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "drift_A0.4_R0.1",
-      "value": 0.85512096408,
-      "tolerance": 0.12826814461199615,
+      "value": 0.762483311549,
+      "tolerance": 0.11437249673236444,
       "comparator": "approx",
       "description": "Drift at amplitude=0.4, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.4_R0.5",
-      "value": 0.827318296546,
-      "tolerance": 0.1240977444819665,
+      "value": 0.734301789067,
+      "tolerance": 0.11014526836007699,
       "comparator": "approx",
       "description": "Drift at amplitude=0.4, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.4_R0.9",
-      "value": 0.799515629013,
-      "tolerance": 0.11992734435193698,
+      "value": 0.706120266585,
+      "tolerance": 0.10591803998778959,
       "comparator": "approx",
       "description": "Drift at amplitude=0.4, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "drift_A0.5_R0.1",
-      "value": 0.676202123401,
-      "tolerance": 0.10143031851018665,
+      "value": 0.590356032621,
+      "tolerance": 0.08855340489316711,
       "comparator": "approx",
       "description": "Drift at amplitude=0.5, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.5_R0.5",
-      "value": 0.641448788984,
-      "tolerance": 0.09621731834764968,
+      "value": 0.553642099998,
+      "tolerance": 0.08304631499967763,
       "comparator": "approx",
       "description": "Drift at amplitude=0.5, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.5_R0.9",
-      "value": 0.606695454567,
-      "tolerance": 0.09100431818511279,
+      "value": 0.516484786656,
+      "tolerance": 0.07747271799837863,
       "comparator": "approx",
       "description": "Drift at amplitude=0.5, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "drift_A0.6_R0.1",
-      "value": 0.497283282723,
-      "tolerance": 0.07459249240837693,
+      "value": 0.412962363177,
+      "tolerance": 0.06194435447660979,
       "comparator": "approx",
       "description": "Drift at amplitude=0.6, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.6_R0.5",
-      "value": 0.455579281422,
-      "tolerance": 0.06833689221333265,
+      "value": 0.368373587167,
+      "tolerance": 0.05525603807505103,
       "comparator": "approx",
       "description": "Drift at amplitude=0.6, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.6_R0.9",
-      "value": 0.413875280122,
-      "tolerance": 0.06208129201828824,
+      "value": 0.323784811157,
+      "tolerance": 0.048567721673492194,
       "comparator": "approx",
       "description": "Drift at amplitude=0.6, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "drift_A0.7_R0.1",
-      "value": 0.318364442044,
-      "tolerance": 0.047754666306567446,
+      "value": 0.235125313015,
+      "tolerance": 0.0352687969522432,
       "comparator": "approx",
       "description": "Drift at amplitude=0.7, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.7_R0.5",
-      "value": 0.26970977386,
-      "tolerance": 0.04045646607901573,
+      "value": 0.183105074336,
+      "tolerance": 0.027465761150424595,
       "comparator": "approx",
       "description": "Drift at amplitude=0.7, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.7_R0.9",
-      "value": 0.221055105676,
-      "tolerance": 0.033158265851463975,
+      "value": 0.131084835657,
+      "tolerance": 0.019662725348606025,
       "comparator": "approx",
       "description": "Drift at amplitude=0.7, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "drift_A0.8_R0.1",
-      "value": 0.139445601365,
-      "tolerance": 0.020916840204757804,
+      "value": 0.057288262853,
+      "tolerance": 0.01,
       "comparator": "approx",
       "description": "Drift at amplitude=0.8, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.8_R0.5",
-      "value": 0.083840266298,
-      "tolerance": 0.01257603994469877,
+      "value": 0.002163438495,
+      "tolerance": 0.01,
       "comparator": "approx",
       "description": "Drift at amplitude=0.8, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.8_R0.9",
-      "value": 0.028234931231,
+      "value": 0.061615139842,
       "tolerance": 0.01,
       "comparator": "approx",
       "description": "Drift at amplitude=0.8, resistance=0.9",
@@ -205,79 +205,79 @@
     },
     {
       "name": "drift_A0.9_R0.1",
-      "value": 0.039473239314,
-      "tolerance": 0.01,
+      "value": 0.12054878731,
+      "tolerance": 0.0180823180964901,
       "comparator": "approx",
       "description": "Drift at amplitude=0.9, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A0.9_R0.5",
-      "value": 0.102029241264,
-      "tolerance": 0.015304386189618257,
+      "value": 0.187431951326,
+      "tolerance": 0.028114792698828404,
       "comparator": "approx",
       "description": "Drift at amplitude=0.9, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A0.9_R0.9",
-      "value": 0.164585243215,
-      "tolerance": 0.02468778648218477,
+      "value": 0.254315115341,
+      "tolerance": 0.038147267301166576,
       "comparator": "approx",
       "description": "Drift at amplitude=0.9, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "drift_A1.0_R0.1",
-      "value": 0.218392079992,
-      "tolerance": 0.03275881199886129,
+      "value": 0.298385837472,
+      "tolerance": 0.044757875620856834,
       "comparator": "approx",
       "description": "Drift at amplitude=1.0, resistance=0.1",
       "unit": "radians"
     },
     {
       "name": "drift_A1.0_R0.5",
-      "value": 0.287898748826,
-      "tolerance": 0.043184812323935215,
+      "value": 0.372700464156,
+      "tolerance": 0.05590506962345491,
       "comparator": "approx",
       "description": "Drift at amplitude=1.0, resistance=0.5",
       "unit": "radians"
     },
     {
       "name": "drift_A1.0_R0.9",
-      "value": 0.35740541766,
-      "tolerance": 0.053610812649009076,
+      "value": 0.44701509084,
+      "tolerance": 0.0670522636260529,
       "comparator": "approx",
       "description": "Drift at amplitude=1.0, resistance=0.9",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.1_A0.2",
-      "value": 0.701246751026,
-      "tolerance": 0.07012467510259213,
+      "value": 0.637744777525,
+      "tolerance": 0.06377447775246324,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.1 to A=0.2",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.1_A0.3",
-      "value": -0.001871205217,
-      "tolerance": 0.0005,
+      "value": 0.019738058744,
+      "tolerance": 0.001973805874385137,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.2 to A=0.3",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.1_A0.4",
-      "value": -0.001871205217,
-      "tolerance": 0.0005,
+      "value": 0.02939270954,
+      "tolerance": 0.002939270954007767,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.3 to A=0.4",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.1_A0.5",
-      "value": -0.001871205217,
+      "value": -0.001403403913,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.4 to A=0.5",
@@ -285,7 +285,7 @@
     },
     {
       "name": "overshoot_diff_R0.1_A0.6",
-      "value": -0.001871205217,
+      "value": -0.001403403913,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.5 to A=0.6",
@@ -293,7 +293,7 @@
     },
     {
       "name": "overshoot_diff_R0.1_A0.7",
-      "value": -0.001871205217,
+      "value": -0.001403403913,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.6 to A=0.7",
@@ -301,7 +301,7 @@
     },
     {
       "name": "overshoot_diff_R0.1_A0.8",
-      "value": -0.001871205217,
+      "value": -0.001403403913,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.7 to A=0.8",
@@ -309,7 +309,7 @@
     },
     {
       "name": "overshoot_diff_R0.1_A0.9",
-      "value": -0.001871205217,
+      "value": -0.001403403913,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.8 to A=0.9",
@@ -317,7 +317,7 @@
     },
     {
       "name": "overshoot_diff_R0.1_A1.0",
-      "value": -0.001871205217,
+      "value": -0.001403403913,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.1 from A=0.9 to A=1.0",
@@ -325,15 +325,15 @@
     },
     {
       "name": "overshoot_diff_R0.5_A0.2",
-      "value": 0.664852586736,
-      "tolerance": 0.06648525867355733,
+      "value": 0.619281983195,
+      "tolerance": 0.06192819831954575,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.1 to A=0.2",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.5_A0.3",
-      "value": -0.001039558454,
+      "value": 0.003804025044,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.2 to A=0.3",
@@ -341,15 +341,15 @@
     },
     {
       "name": "overshoot_diff_R0.5_A0.4",
-      "value": -0.001039558454,
-      "tolerance": 0.0005,
+      "value": 0.028227020042,
+      "tolerance": 0.002822702004220901,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.3 to A=0.4",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.5_A0.5",
-      "value": -0.001039558454,
+      "value": -0.000779668841,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.4 to A=0.5",
@@ -357,7 +357,7 @@
     },
     {
       "name": "overshoot_diff_R0.5_A0.6",
-      "value": -0.001039558454,
+      "value": -0.000779668841,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.5 to A=0.6",
@@ -365,7 +365,7 @@
     },
     {
       "name": "overshoot_diff_R0.5_A0.7",
-      "value": -0.001039558454,
+      "value": -0.000779668841,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.6 to A=0.7",
@@ -373,7 +373,7 @@
     },
     {
       "name": "overshoot_diff_R0.5_A0.8",
-      "value": -0.001039558454,
+      "value": -0.000779668841,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.7 to A=0.8",
@@ -381,7 +381,7 @@
     },
     {
       "name": "overshoot_diff_R0.5_A0.9",
-      "value": -0.001039558454,
+      "value": -0.000779668841,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.8 to A=0.9",
@@ -389,7 +389,7 @@
     },
     {
       "name": "overshoot_diff_R0.5_A1.0",
-      "value": -0.001039558454,
+      "value": -0.000779668841,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.5 from A=0.9 to A=1.0",
@@ -397,15 +397,15 @@
     },
     {
       "name": "overshoot_diff_R0.9_A0.2",
-      "value": 0.628458422445,
-      "tolerance": 0.06284584224452239,
+      "value": 0.588722659779,
+      "tolerance": 0.058872265977854846,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.1 to A=0.2",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.9_A0.3",
-      "value": -0.000207911691,
+      "value": -3.3479568e-05,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.2 to A=0.3",
@@ -413,15 +413,15 @@
     },
     {
       "name": "overshoot_diff_R0.9_A0.4",
-      "value": -0.000207911691,
-      "tolerance": 0.0005,
+      "value": 0.027061330544,
+      "tolerance": 0.002706133054433968,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.3 to A=0.4",
       "unit": "radians"
     },
     {
       "name": "overshoot_diff_R0.9_A0.5",
-      "value": -0.000207911691,
+      "value": -0.000155933768,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.4 to A=0.5",
@@ -429,7 +429,7 @@
     },
     {
       "name": "overshoot_diff_R0.9_A0.6",
-      "value": -0.000207911691,
+      "value": -0.000155933768,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.5 to A=0.6",
@@ -437,7 +437,7 @@
     },
     {
       "name": "overshoot_diff_R0.9_A0.7",
-      "value": -0.000207911691,
+      "value": -0.000155933768,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.6 to A=0.7",
@@ -445,7 +445,7 @@
     },
     {
       "name": "overshoot_diff_R0.9_A0.8",
-      "value": -0.000207911691,
+      "value": -0.000155933768,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.7 to A=0.8",
@@ -453,7 +453,7 @@
     },
     {
       "name": "overshoot_diff_R0.9_A0.9",
-      "value": -0.000207911691,
+      "value": -0.000155933768,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.8 to A=0.9",
@@ -461,7 +461,7 @@
     },
     {
       "name": "overshoot_diff_R0.9_A1.0",
-      "value": -0.000207911691,
+      "value": -0.000155933768,
       "tolerance": 0.0005,
       "comparator": "approx",
       "description": "Overshoot change at R=0.9 from A=0.9 to A=1.0",
