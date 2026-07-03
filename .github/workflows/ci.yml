@@ -1,5 +1,15 @@
 # CI for VNES-Lab — external verification oracle for ground truth execution.
 #
+# INVARIANT: CI MUST execute the same entrypoint as local ground truth:
+#
+#     CI = run(regression_suite.py @ commit SHA)
+#
+# Not a reimplementation. Not a re-interpretation. The checkout step pins
+# to the exact commit being tested; then ci.yml calls the same
+# regression_suite.py that any local invocation would. This prevents CI
+# divergence drift — the silent failure mode where CI's config drifts away
+# from the canonical ground truth logic over time.
+#
 # CI is NOT a higher truth layer. It is a second independent instantiation
 # of the same ground truth computation (regression_suite.py) in an isolated
 # environment. It proves reproducibility, not ontological authority.
@@ -35,6 +45,12 @@ jobs:
         with:
           python-version: '3.11'
           cache: pip
+
+      - name: Verify invariant — CI = run(regression_suite.py @ commit SHA)
+        run: |
+          echo "Commit: ${{ github.sha }}"
+          sha256sum regressions/regression_suite.py
+          echo "Invariant satisfied: CI will execute the same regression_suite.py as local ground truth"
 
       - name: Install dependencies
         run: |

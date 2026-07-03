@@ -13,6 +13,14 @@ AUTHORITATIVENESS HIERARCHY (tight version):
   2      Persistence       commit-pinned artifacts (historical snapshots)
   1      Interpretation    agent narratives (non-authoritative)
 
+  CI DIVERGENCE DRIFT GUARD:
+    CI MUST execute the same entrypoint as local ground truth:
+      CI = run(regression_suite.py @ commit SHA)
+    Not a reimplementation. Not a re-interpretation. The checkout step in
+    ci.yml pins to the exact commit being tested, then calls the same
+    regression_suite.py that any local invocation would. This prevents CI's
+    config from drifting away from canonical ground truth logic over time.
+
   Every status label (blocked, fixed, pending, regression) MUST trace to
   one of Levels 2-4. Anything at Level 1 must be explicitly labeled
   "non-authoritative interpretation". Level 5 (CI) is NOT a higher truth

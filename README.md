@@ -59,11 +59,13 @@ Every status label (blocked, fixed, pending, regression) MUST trace to one of:
 
 | Level | Role | Description |
 |-------|------|-------------|
-| 5 | External verifier | CI reruns ground truth in isolated environment (NOT a higher truth layer — proves reproducibility, not ontology) |
+| 5 | External verifier | `CI = run(regression_suite.py @ commit SHA)` — NOT a higher truth layer, proves reproducibility not ontology |
 | 4 | Ground truth | `regressions/regression_suite.py` (canonical logic) |
 | 3 | Derived truth | `regressions/status.py` (pure function over Level 4 output) |
 | 2 | Persistence | commit-pinned artifacts (historical snapshots) |
 | 1 | Interpretation | agent narratives — must be labeled "non-authoritative interpretation" |
+
+**CI divergence drift guard**: CI MUST execute the same entrypoint as local ground truth — `regression_suite.py @ commit SHA`. Not a reimplementation. Not a re-interpretation. Pins to exact commit, calls the same script. Prevents CI config from drifting away from canonical logic.
 
 Anything at Level 1 must be explicitly labeled as non-authoritative.
 Level 5 (CI) is an independent verification oracle, not a superior truth layer.
