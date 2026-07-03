@@ -1,0 +1,657 @@
+{
+  "experiment": "006_self_repair",
+  "generated": "2026-07-03T04:25:23Z",
+  "version": "1.0",
+  "metric_count": 81,
+  "metrics": [
+    {
+      "name": "min_integrity_invariant",
+      "value": 0.576665974154,
+      "tolerance": 1e-06,
+      "comparator": "gte",
+      "description": "Minimum integrity = 0.576666 across all trials (must be >= 0.5)",
+      "unit": "boolean",
+      "threshold": 0.5
+    },
+    {
+      "name": "recovery_time_D0.05_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.05, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.05_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.05, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.05_H0.5",
+      "value": 221.0,
+      "tolerance": 66.3,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.05, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.05_H0.7",
+      "value": 240.0,
+      "tolerance": 72.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.05, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.05_H0.9",
+      "value": 159.0,
+      "tolerance": 47.699999999999996,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.05, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.15_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.15, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.15_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.15, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.15_H0.5",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.15, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.15_H0.7",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.15, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.15_H0.9",
+      "value": 205.0,
+      "tolerance": 61.5,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.15, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.1_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.1, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.1_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.1, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.1_H0.5",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.1, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.1_H0.7",
+      "value": 206.0,
+      "tolerance": 61.8,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.1, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.1_H0.9",
+      "value": 221.0,
+      "tolerance": 66.3,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.1, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.25_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.25, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.25_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.25, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.25_H0.5",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.25, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.25_H0.7",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.25, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.25_H0.9",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.25, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.2_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.2, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.2_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.2, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.2_H0.5",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.2, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.2_H0.7",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.2, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.2_H0.9",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.2, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.3_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.3, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.3_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.3, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.3_H0.5",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.3, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.3_H0.7",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.3, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.3_H0.9",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.3, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.4_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.4, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.4_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.4, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.4_H0.5",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.4, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.4_H0.7",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.4, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.4_H0.9",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.4, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.5_H0.1",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.5, harm=0.1",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.5_H0.3",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.5, harm=0.3",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.5_H0.5",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.5, harm=0.5",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.5_H0.7",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.5, harm=0.7",
+      "unit": "steps"
+    },
+    {
+      "name": "recovery_time_D0.5_H0.9",
+      "value": 0.0,
+      "tolerance": 20.0,
+      "comparator": "approx",
+      "description": "Recovery time at depth=0.5, harm=0.9",
+      "unit": "steps"
+    },
+    {
+      "name": "residual_D0.05_H0.1",
+      "value": 1.90726e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.05, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.05_H0.3",
+      "value": 5.77562e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.05, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.05_H0.5",
+      "value": 7.1899505e-05,
+      "tolerance": 3.5949752268463896e-05,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.05, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.05_H0.7",
+      "value": 0.000104920747,
+      "tolerance": 5.2460373677779064e-05,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.05, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.05_H0.9",
+      "value": 2.0719716e-05,
+      "tolerance": 1.0359857927875528e-05,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.05, harm=0.9",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.15_H0.1",
+      "value": 7.1878e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.15, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.15_H0.3",
+      "value": 2.17651e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.15, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.15_H0.5",
+      "value": 3.65687e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.15, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.15_H0.7",
+      "value": 5.1547e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.15, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.15_H0.9",
+      "value": 5.2552084e-05,
+      "tolerance": 2.6276042219614903e-05,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.15, harm=0.9",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.1_H0.1",
+      "value": 1.04295e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.1, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.1_H0.3",
+      "value": 3.15821e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.1, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.1_H0.5",
+      "value": 5.30642e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.1, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.1_H0.7",
+      "value": 5.3583795e-05,
+      "tolerance": 2.67918974423094e-05,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.1, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.1_H0.9",
+      "value": 7.151599e-05,
+      "tolerance": 3.5757995142776116e-05,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.1, harm=0.9",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.25_H0.1",
+      "value": 4.4438e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.25, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.25_H0.3",
+      "value": 1.34553e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.25, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.25_H0.5",
+      "value": 2.26058e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.25, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.25_H0.7",
+      "value": 3.18634e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.25, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.25_H0.9",
+      "value": 4.11961e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.25, harm=0.9",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.2_H0.1",
+      "value": 5.4894e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.2, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.2_H0.3",
+      "value": 1.66216e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.2, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.2_H0.5",
+      "value": 2.79261e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.2, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.2_H0.7",
+      "value": 3.93634e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.2, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.2_H0.9",
+      "value": 5.08942e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.2, harm=0.9",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.3_H0.1",
+      "value": 3.7352e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.3, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.3_H0.3",
+      "value": 1.13096e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.3, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.3_H0.5",
+      "value": 1.90003e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.3, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.3_H0.7",
+      "value": 2.67806e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.3, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.3_H0.9",
+      "value": 3.46237e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.3, harm=0.9",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.4_H0.1",
+      "value": 2.8359e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.4, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.4_H0.3",
+      "value": 8.5861e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.4, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.4_H0.5",
+      "value": 1.4424e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.4, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.4_H0.7",
+      "value": 2.03294e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.4, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.4_H0.9",
+      "value": 2.62819e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.4, harm=0.9",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.5_H0.1",
+      "value": 2.2885e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.5, harm=0.1",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.5_H0.3",
+      "value": 6.9285e-08,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.5, harm=0.3",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.5_H0.5",
+      "value": 1.16388e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.5, harm=0.5",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.5_H0.7",
+      "value": 1.6403e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.5, harm=0.7",
+      "unit": "distance"
+    },
+    {
+      "name": "residual_D0.5_H0.9",
+      "value": 2.12047e-07,
+      "tolerance": 1e-06,
+      "comparator": "approx",
+      "description": "Residual error at depth=0.5, harm=0.9",
+      "unit": "distance"
+    }
+  ]
+}

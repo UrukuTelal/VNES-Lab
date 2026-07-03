@@ -1,0 +1,455 @@
+{
+  "experiment": "005_multi_agent",
+  "generated": "2026-07-03T04:25:23Z",
+  "version": "1.0",
+  "metric_count": 55,
+  "metrics": [
+    {
+      "name": "energy_C0_gte_C0.1",
+      "value": 0.572465582298,
+      "tolerance": 1e-10,
+      "comparator": "gte",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.1 (0.2333)",
+      "unit": "boolean",
+      "threshold": 0.0
+    },
+    {
+      "name": "energy_C0_gte_C0.2",
+      "value": 0.607692880684,
+      "tolerance": 1e-10,
+      "comparator": "gte",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.2 (0.1981)",
+      "unit": "boolean",
+      "threshold": 0.0
+    },
+    {
+      "name": "energy_C0_gte_C0.3",
+      "value": 0.609370951072,
+      "tolerance": 1e-10,
+      "comparator": "gte",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.3 (0.1964)",
+      "unit": "boolean",
+      "threshold": 0.0
+    },
+    {
+      "name": "energy_C0_gte_C0.4",
+      "value": 0.609448426846,
+      "tolerance": 1e-10,
+      "comparator": "gte",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.4 (0.1964)",
+      "unit": "boolean",
+      "threshold": 0.0
+    },
+    {
+      "name": "energy_C0_gte_C0.5",
+      "value": 0.609451891543,
+      "tolerance": 1e-10,
+      "comparator": "gte",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.5 (0.1963)",
+      "unit": "boolean",
+      "threshold": 0.0
+    },
+    {
+      "name": "energy_C0_gte_C0.6",
+      "value": 0.609452041518,
+      "tolerance": 1e-10,
+      "comparator": "gte",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.6 (0.1963)",
+      "unit": "boolean",
+      "threshold": 0.0
+    },
+    {
+      "name": "energy_C0_gte_C0.7",
+      "value": 0.609452047797,
+      "tolerance": 1e-10,
+      "comparator": "gte",
+      "description": "Energy transfer: C=0 (0.8058) >= C=0.7 (0.1963)",
+      "unit": "boolean",
+      "threshold": 0.0
+    },
+    {
+      "name": "sync_C0.0_W0.0",
+      "value": 0.735508496028,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.0, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.0_W0.1",
+      "value": 0.735447787244,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.0, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.0_W0.2",
+      "value": 0.73515928462,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.0, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.0_W0.3",
+      "value": 0.734644222784,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.0, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.0_W0.4",
+      "value": 0.73390445815,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.0, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.0_W0.5",
+      "value": 0.732942454059,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.0, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.1_W0.0",
+      "value": 0.858978569011,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.1, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.1_W0.1",
+      "value": 0.859022462893,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.1, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.1_W0.2",
+      "value": 0.859087695584,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.1, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.1_W0.3",
+      "value": 0.859174207728,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.1, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.1_W0.4",
+      "value": 0.859281920749,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.1, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.1_W0.5",
+      "value": 0.859410737023,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.1, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.2_W0.0",
+      "value": 0.860028723845,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.2, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.2_W0.1",
+      "value": 0.860070184433,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.2, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.2_W0.2",
+      "value": 0.860131648628,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.2, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.2_W0.3",
+      "value": 0.860213063378,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.2, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.2_W0.4",
+      "value": 0.860314358525,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.2, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.2_W0.5",
+      "value": 0.860435446951,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.2, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.3_W0.0",
+      "value": 0.860052182358,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.3, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.3_W0.1",
+      "value": 0.860093516214,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.3, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.3_W0.2",
+      "value": 0.860154760354,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.3, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.3_W0.3",
+      "value": 0.860235862153,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.3, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.3_W0.4",
+      "value": 0.860336752036,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.3, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.3_W0.5",
+      "value": 0.860457343619,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.3, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.4_W0.0",
+      "value": 0.860053206999,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.4, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.4_W0.1",
+      "value": 0.860094534981,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.4, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.4_W0.2",
+      "value": 0.860155768872,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.4, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.4_W0.3",
+      "value": 0.860236856069,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.4, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.4_W0.4",
+      "value": 0.860337727023,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.4, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.4_W0.5",
+      "value": 0.860458295385,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.4, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.5_W0.0",
+      "value": 0.8600532527,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.5, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.5_W0.1",
+      "value": 0.860094580419,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.5, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.5_W0.2",
+      "value": 0.860155813852,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.5, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.5_W0.3",
+      "value": 0.860236900396,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.5, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.5_W0.4",
+      "value": 0.860337770502,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.5, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.5_W0.5",
+      "value": 0.860458337826,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.5, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.6_W0.0",
+      "value": 0.860053254678,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.6, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.6_W0.1",
+      "value": 0.860094582386,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.6, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.6_W0.2",
+      "value": 0.860155815799,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.6, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.6_W0.3",
+      "value": 0.860236902314,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.6, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.6_W0.4",
+      "value": 0.860337772384,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.6, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.6_W0.5",
+      "value": 0.860458339663,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.6, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.7_W0.0",
+      "value": 0.860053254761,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.7, willpower_diff=0.0",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.7_W0.1",
+      "value": 0.860094582468,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.7, willpower_diff=0.1",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.7_W0.2",
+      "value": 0.86015581588,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.7, willpower_diff=0.2",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.7_W0.3",
+      "value": 0.860236902395,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.7, willpower_diff=0.3",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.7_W0.4",
+      "value": 0.860337772463,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.7, willpower_diff=0.4",
+      "unit": "cosine_sim"
+    },
+    {
+      "name": "sync_C0.7_W0.5",
+      "value": 0.86045833974,
+      "tolerance": 0.01,
+      "comparator": "approx",
+      "description": "Sync index at coupling=0.7, willpower_diff=0.5",
+      "unit": "cosine_sim"
+    }
+  ]
+}
