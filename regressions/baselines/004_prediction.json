@@ -1,7 +1,14 @@
 {
+  "baseline_version": 1,
   "experiment": "004_prediction",
-  "generated": "2026-07-03T04:25:23Z",
-  "version": "1.0",
+  "generated": "2026-07-03T04:32:50Z",
+  "generator_version": "1.0",
+  "provenance": {
+    "git_commit": "68fa87532b13c1a42a447ef58dc1633227cea919",
+    "git_dirty": true,
+    "random_seed": 42,
+    "hostname": "unknown"
+  },
   "metric_count": 6,
   "metrics": [
     {
