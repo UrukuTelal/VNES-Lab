@@ -1,0 +1,68 @@
+# CI for VNES-Lab — final arbiter of all status claims.
+#
+# Every blocked / fixed / pending / regression label must be
+# traceable to this pipeline's output. If CI passes, claims are
+# authoritative. If CI fails, all contradictory claims are invalid
+# regardless of their source.
+#
+# Run on every push and PR. The regression suite exit code IS the verdict.
+
+name: VNES-Lab Regression Suite
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+  workflow_dispatch:
+
+jobs:
+  regression-suite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # needed for baseline provenance (git commit)
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install numpy matplotlib
+          echo "Dependencies installed (exit $?)"
+
+      - name: Run regression suite (ground truth)
+        run: |
+          python regressions/regression_suite.py --json ci_report.json
+
+      - name: Derive project status
+        run: |
+          python regressions/status.py
+          python regressions/status.py --json
+
+      - name: Archive CI report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ci-report
+          path: ci_report.json
+
+      - name: Assert zero regressions
+        run: |
+          python -c "
+          import json
+          r = json.load(open('ci_report.json'))
+          s = r['summary']
+          verdict = s.get('verdict', 'FAIL')
+          print(f'Verdict: {verdict}')
+          print(f'{s[\"passed\"]}/{s[\"total\"]} passed, {s[\"failed\"]} failed, {s[\"error\"]} errors')
+          assert verdict == 'PASS', f'CI REJECTED: {s[\"failed\"]} regressions detected'
+          print('CI ACCEPTED: all status claims are authoritative')
+          "
