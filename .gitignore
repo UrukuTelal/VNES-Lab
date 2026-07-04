@@ -2,3 +2,30 @@ regressions/baselines_new/
 regression_diff_classified.json
 ci_report.json
 .tmp_suite_report.json
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Windows artifacts
+desktop.ini
+Thumbs.db
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# Data artifacts (regenerated on demand)
+rlaaer/data/experiments.db
+rlaaer/data/cache/
+rlaaer/data/checkpoints/
+rlaaer/data/transformed/
+rlaaer/data/scheduler/jobs/
+
+# Experiment 001 stray reviews
+experiments/001_homeostasis/reviews/
