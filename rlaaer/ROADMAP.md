@@ -221,4 +221,29 @@ The agent council proposes, executes, reviews, and refines experiments in a cont
 
 ---
 
-*Phase 2 (Milestones 1–5, LLM Council Integration, Review Transcripts) complete. Phase 3 items are aspirational and unstarted.*
+*Phase 2 (Milestones 1–5, LLM Council Integration, Review Transcripts, Experiment 009) complete. Phase 3 items are aspirational and unstarted.*
+
+## Completed Checklist
+
+| Item | Date | Evidence |
+|------|------|----------|
+| M1: Provenance | 2026-07-03 | ProvenanceTracker, manuscript appendix |
+| M2: Registry | 2026-07-03 | SQLite, CLI search/history |
+| M3: Scheduler | 2026-07-03 | Priority queue, retry, workers |
+| M4: Streaming | 2026-07-03 | Welford online stats, adaptive control |
+| M5: Graph | 2026-07-03 | DepGraph, DAGExecutor |
+| LLM Council | 2026-07-03 | 9 roles, Ollama, JSON parsing |
+| Review Transcripts | 2026-07-03 | Per-experiment review artifacts |
+| Experiment 009 | 2026-07-03 | Census data, 125 trials |
+| GitHub push + CI | 2026-07-03 | github.com/UrukuTelal/VNES-Lab |
+| Polish | 2026-07-03 | depends_on docs, socket probe, Ollama timeout |
+| Regression suite | 2026-07-04 | 241/241 PASS (verified) |
+| R-LAAER tests | 2026-07-04 | 265/265 PASS (verified) |
+
+## Known Gaps
+
+1. **Pillar Council infra:** Van_Nueman_AI missing `aiohttp`, `numpy`, `ollama` packages
+2. **CI doesn't run R-LAAER tests** — requires adding `requests` + `pytest` to deps
+3. **API keys unset** — CENSUS_API_KEY, NASA_API_KEY, NOAA_API_KEY, KAGGLE_API_KEY empty
+4. **MultiverseScreensaver:** Not a git repo
+5. **Van_Nueman_Whisper:** Path missing

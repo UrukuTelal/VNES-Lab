@@ -120,16 +120,11 @@
 
 ## CI Integration
 
-`.github/workflows/rlaaer-ci.yml`:
+CI lives at `.github/workflows/ci.yml` and runs the regression suite at the commit SHA.
+
+R-LAAER tests are not yet in CI. To add them, extend `.github/workflows/ci.yml` with:
 
 ```yaml
-name: R-LAAER CI
-on: [push, pull_request]
-jobs:
-  rlaaer-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
       - name: Run R-LAAER tests
         run: |
           python -m pytest rlaaer/tests/ -v
@@ -138,9 +133,10 @@ jobs:
           python -c "from rlaaer.validation import validate_spec; import glob
           for f in glob.glob('experiments/*/spec.yaml'):
               validate_spec(f)"
-      - name: Run regression suite (if experiments changed)
+      - name: Run regression suite
         run: |
           python regressions/regression_suite.py
 ```
 
-Note: R-LAAER CI does NOT replace the existing VNES-Lab regression CI. It is an additional workflow that validates the R-LAAER subsystem itself.
+Note: R-LAAER tests depend on `requests` and `pytest` which are not in `requirements.txt`.
+They are currently excluded from CI to keep the workflow lightweight.
