@@ -1,0 +1,128 @@
+experiment:
+  id: "009"
+  title: "Demographic Scaling of Consensus Formation"
+  hypothesis: >
+    If entity population size follows real Census demographic distributions,
+    then consensus convergence time scales logarithmically with population
+    diversity entropy, modulated by the Scale Router attention attenuation mechanism.
+  status: draft
+  author: "R-LAAER (Hypothesis Generator v1)"
+  created: "2026-07-03"
+  depends_on: []
+  tags:
+    - emergence
+    - cognition
+    - multi-agent
+    - scale-router
+
+systems:
+  vnes_lab:
+    enabled: true
+    psv_version: ">=1.0"
+    overrides:
+      n_pillars: 16
+      n_entities: 100
+
+data_sources:
+  - source: census
+    tier: 1
+    endpoint: "acs/acs5"
+    variables:
+      - "B01001_001E"
+    year: 2020
+    hash: null
+    transformation: "identity"
+    rationale: >
+      US Census ACS 5-year estimates (2016-2020) for population by region.
+      Embedded as static snapshot in data/census_regions.csv.
+      Four regions: Northeast (17.1%), Midwest (20.7%), South (38.1%), West (24.1%).
+
+parameters:
+  independent:
+    - name: population_scale
+      domain: [0, 4]
+      steps: 5
+      target: "run.py"
+      rationale: >
+        Scale exponent k such that entity count = 2^k.
+        2^0=1 (single), 2^4=16 (small society).
+    - name: diversity_entropy
+      domain: [0.1, 0.9]
+      steps: 5
+      target: "run.py"
+      rationale: >
+        Target Shannon entropy of the demographic distribution across regions.
+        Low entropy ≈ single region dominates; high entropy ≈ uniform mix.
+  controlled:
+    - name: random_seed
+      value: 42
+    - name: timesteps
+      value: 1000
+    - name: consensus_threshold
+      value: 0.85
+
+metrics:
+  stability:
+    - name: convergence_time
+      comparator: approx
+      tolerance: 0.20
+      extractor: "metrics.extract_convergence_time"
+    - name: final_coherence
+      comparator: approx
+      tolerance: 0.10
+      extractor: "metrics.extract_final_coherence"
+  invariants:
+    - name: convergence_reached
+      comparator: eq
+      threshold: true
+      extractor: "metrics.extract_convergence_reached"
+  exploratory:
+    - name: post_convergence_drift
+      extractor: "metrics.extract_post_convergence_drift"
+    - name: attenuation_factor
+      extractor: "metrics.extract_attenuation_factor"
+    - name: demographic_entropy_realized
+      extractor: "metrics.extract_demographic_entropy"
+
+statistics:
+  alpha: 0.05
+  power: 0.80
+  minimum_effect_size: 0.30
+  correction: "bonferroni"
+  method: "independent_t"
+  sample_size_justification: >
+    5 population_scale levels x 5 diversity_entropy levels = 25 conditions,
+    each replicated 5 times = 125 trials. Power analysis at alpha=0.05,
+    d=0.30, 1-beta=0.80 for 2-way ANOVA with 25 groups.
+
+execution:
+  trials_per_condition: 5
+  total_conditions: 25
+  total_trials: 125
+  checkpoint_interval_ticks: 250
+  rollback_on_failure: true
+  max_duration_minutes: 15
+  cache_enabled: true
+
+review:
+  pre_registration_required: true
+  approval_threshold: 12
+  peer_reviewers:
+    - methodologist
+    - theoretician
+    - reproducibility_officer
+    - security_researcher
+  max_revision_rounds: 3
+  rejection_triggers:
+    - "security_veto"
+    - "reproducibility_veto"
+    - "unanimous_reject"
+
+publication:
+  format: "markdown"
+  license: "CC-BY-4.0"
+  authors:
+    - name: "R-LAAER"
+      role: "Autonomous Research Agent"
+  include_figures: true
+  citation_style: "ieee"

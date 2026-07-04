@@ -1,0 +1,11 @@
+{
+  "role": "Physicist",
+  "agent_name": "Flux",
+  "model": "stub",
+  "prompt_version": "v1.2",
+  "timestamp": "2026-07-04T03:29:11.087883+00:00",
+  "decision": "accept",
+  "confidence": 0.8,
+  "issues": [],
+  "suggestions": []
+}

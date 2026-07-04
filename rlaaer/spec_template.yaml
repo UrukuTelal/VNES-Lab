@@ -1,0 +1,147 @@
+# =============================================================================
+# R-LAAER Experiment Protocol Spec (v1)
+# =============================================================================
+# Every R-LAAER experiment is defined by a single spec.yaml.
+# Once approved by the Pillar Council, this file is locked (pre-registration).
+# No post-hoc changes to metrics, parameters, or statistical methods.
+# =============================================================================
+
+experiment:
+  id: "009"                              # auto-increment from registry
+  title: "Experiment Title"
+  hypothesis: "If X then Y, because Z."  # falsifiable, quantitative prediction
+  status: draft                          # draft → registered → executing → review → published | rejected
+  author: "R-LAAER (Hypothesis Generator v1)"
+  created: "2026-07-03"
+  depends_on: []                         # optional: list of experiment IDs (DAG dependency)
+  tags:
+    - cognition
+    - physics
+    - homeostasis
+
+systems:
+  vnes_lab:
+    enabled: true                        # always true — PSV layer is mandatory
+    psv_version: ">=1.0"
+    overrides:
+      n_pillars: 16
+      n_entities: 100
+  engine:
+    enabled: false                       # set true for full-stack experiments
+    headless: true
+    startup_timeout_sec: 30
+  api:
+    enabled: false
+    endpoints:
+      - rest
+      # - websocket
+      # - pillar_bridge
+
+data_sources:
+  - source: census                       # must match key in config.DATA_SOURCES
+    tier: 1
+    endpoint: "acs/acs5"
+    variables:
+      - "B01001_001E"                    # total population
+    year: 2020
+    hash: null                           # filled on download
+    transformation: "log_normalize"
+    rationale: "Population density as entity count prior"
+  - source: arxiv
+    tier: 1
+    query: "neural scaling laws AND cognitive architecture"
+    max_results: 5
+    rationale: "Grounding for expected scaling exponent"
+
+parameters:
+  independent:
+    - name: coupling_strength
+      domain: [0.0, 2.0]
+      steps: 11                          # inclusive: 0.0, 0.2, ..., 2.0
+      target: "vnes_lab.overrides"
+      source: "census B01001_001E population gradient"
+      rationale: "Population density → social coupling strength"
+    - name: noise_amplitude
+      domain: [0.001, 0.5]
+      steps: 8                           # log-spaced
+      target: "vnes_lab.overrides"
+      source: "expected sensor noise from literature [cite: arxiv:2304.xxxxx]"
+      rationale: "Robustness boundary characterization"
+  controlled:
+    - name: random_seed
+      value: 42
+    - name: n_entities
+      value: 100
+    - name: n_pillars
+      value: 16
+    - name: timesteps
+      value: 5000
+  computed:
+    - name: scaled_coupling
+      formula: "coupling_strength * (n_entities / 100)"
+      unit: "dimensionless"
+
+metrics:
+  stability:                             # approximate equality within tolerance
+    - name: mean_coherence
+      comparator: approx
+      tolerance: 0.15                    # ±15%
+      extractor: "metrics.extract_mean_coherence"
+    - name: entropy_rate
+      comparator: approx
+      tolerance: 0.10
+      extractor: "metrics.extract_entropy_rate"
+  invariants:                            # hard bounds
+    - name: pillar_sum_conservation
+      comparator: gte
+      threshold: 0.95                    # sum(pillars) / n_pillars >= 0.95
+      extractor: "metrics.extract_pillar_sum"
+    - name: entity_count_stable
+      comparator: eq
+      threshold: 100
+      extractor: "metrics.extract_entity_count"
+  exploratory:                          # informative, not gating
+    - name: fourier_peak_frequency
+      extractor: "metrics.extract_fourier_peak"
+    - name: cluster_diameter
+      extractor: "metrics.extract_cluster_diameter"
+
+statistics:
+  alpha: 0.05                           # pre-registered, no post-hoc changes
+  power: 0.80
+  minimum_effect_size: 0.30             # Cohen's d
+  correction: "bonferroni"               # multiple comparison correction
+  method: "independent_t"               # pre-specified, not chosen post-hoc
+  sample_size_justification: "n=11 coupling levels × 8 noise levels = 88 trials, power analysis confirms 80% power at d=0.30"
+
+execution:
+  trials_per_condition: 10
+  total_conditions: 88                  # 11 × 8
+  total_trials: 880
+  checkpoint_interval_ticks: 1000
+  rollback_on_failure: true
+  max_duration_minutes: 30
+  cache_enabled: true
+
+review:
+  pre_registration_required: true
+  approval_threshold: 12                # of 16 Pillar Council votes
+  peer_reviewers:                        # by agent role
+    - methodologist
+    - theoretician
+    - validation_engineer
+    - physicist                         # conditional: only if physics domain
+  max_revision_rounds: 3
+  rejection_triggers:
+    - "security_veto"                   # single agent veto = reject
+    - "reproducibility_veto"           # single agent veto = reject
+    - "unanimous_reject"               # all reviewers reject
+
+publication:
+  format: "markdown"                    # markdown | latex | both
+  license: "CC-BY-4.0"
+  authors:
+    - name: "R-LAAER"
+      role: "Autonomous Research Agent"
+  include_figures: true
+  citation_style: "ieee"

@@ -1,0 +1,35 @@
+{
+  "experiment_id": "009",
+  "started_at": "2026-07-04T03:11:12.804758+00:00",
+  "trials_completed": 226,
+  "trials_failed": 0,
+  "metrics": {},
+  "status": "running",
+  "provenance": {
+    "captured_at": "2026-07-04T03:11:12.324057+00:00",
+    "git": {
+      "commit": "1cb6159d224db283ee95336afd9e2cbbd7b9cb60",
+      "branch": "master",
+      "dirty": true,
+      "repo_root": "C:\\Projects\\VNES-Lab"
+    },
+    "platform": {
+      "system": "Windows",
+      "release": "10",
+      "machine": "AMD64",
+      "python": "3.11.9"
+    },
+    "toolchain": {
+      "cuda": "13.2",
+      "compiler": "unknown"
+    },
+    "engine": {
+      "version": "unknown"
+    },
+    "spec": {
+      "hash": "66b16a98cbb2af2f45f3213d7b5923dff179ee4ceba26a488dd25db4841fab8b",
+      "id": "009",
+      "title": "Demographic Scaling of Consensus Formation"
+    }
+  }
+}

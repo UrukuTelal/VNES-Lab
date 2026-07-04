@@ -1,0 +1,11 @@
+{
+  "role": "Security Researcher",
+  "agent_name": "Havik",
+  "model": "stub",
+  "prompt_version": "v1.2",
+  "timestamp": "2026-07-04T03:29:11.088844+00:00",
+  "decision": "accept",
+  "confidence": 0.8,
+  "issues": [],
+  "suggestions": []
+}
