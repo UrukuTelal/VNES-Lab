@@ -1,11 +1,16 @@
 """Engine Client — REST API + WebSocket + SHM bridge to the C++ engine."""
 
 import json
+import socket
 from typing import Any
 
 import requests
 
 from rlaaer.config import ENGINE
+
+# Timeout for TCP socket pre-check before HTTP call (fast-fail).
+# Prevents hanging ~5s on HTTP timeout when engine is completely down.
+_SOCKET_PROBE_TIMEOUT_SEC = 0.3
 
 
 class EngineClientError(Exception):
@@ -15,15 +20,36 @@ class EngineClientError(Exception):
 class EngineClient:
     """Client for the C++ engine REST API and WebSocket."""
 
-    def __init__(self, base_url: str | None = None):
+    def __init__(self, base_url: str | None = None, socket_timeout: float | None = None):
         self.base_url = base_url or ENGINE["rest_api"]
         self.ws_url = ENGINE.get("websocket", "ws://localhost:8081")
         self.pillar_url = ENGINE.get("pillar_bridge", "http://localhost:8888")
         self.timeout = ENGINE.get("startup_timeout_sec", 30)
+        self._socket_timeout = socket_timeout if socket_timeout is not None else _SOCKET_PROBE_TIMEOUT_SEC
         self._session = requests.Session()
 
+    def _probe_socket(self) -> bool:
+        """Fast TCP socket probe before attempting HTTP — fails in ~300ms if port is closed."""
+        try:
+            host = self.base_url.replace("http://", "").replace("https://", "").split(":")[0]
+            port_str = self.base_url.split("://")[-1].split(":")[-1] if ":" in self.base_url.split("://")[-1] else "80"
+            port = int(port_str)
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.settimeout(self._socket_timeout)
+            try:
+                s.connect((host, port))
+                s.close()
+                return True
+            except (socket.timeout, ConnectionRefusedError, OSError):
+                s.close()
+                return False
+        except Exception:
+            return False
+
     def ping(self) -> bool:
-        """Check if engine is reachable."""
+        """Check if engine is reachable — fast-fail socket probe first, then HTTP."""
+        if not self._probe_socket():
+            return False
         try:
             resp = self._session.get(f"{self.base_url}/health", timeout=5)
             return resp.status_code == 200

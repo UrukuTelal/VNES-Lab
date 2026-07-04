@@ -4,6 +4,18 @@
 # Every R-LAAER experiment is defined by a single spec.yaml.
 # Once approved by the Pillar Council, this file is locked (pre-registration).
 # No post-hoc changes to metrics, parameters, or statistical methods.
+#
+# DAG Dependency System (experiment.depends_on):
+#   List experiment IDs that must complete before this experiment runs.
+#   The Graph executor (rlaaer/graph/) resolves the DAG via Kahn's algorithm:
+#     - Cycles are detected and rejected at validation time
+#     - Missing dependencies produce a clear error
+#     - Independent experiments at the same DAG level run in parallel
+#     - Partial re-execution: if only dep A changes, downstream deps B, C are
+#       re-run but unrelated sibling experiments are skipped
+#   Example:
+#     depends_on: ["007", "008"]   # runs after both 007 and 008 complete
+#     depends_on: []               # no dependencies (default)
 # =============================================================================
 
 experiment:

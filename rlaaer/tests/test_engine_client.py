@@ -12,11 +12,12 @@ class TestEngineClient:
         return EngineClient(base_url="http://localhost:9999")
 
     def test_ping_success(self, client):
-        with patch("requests.Session.get") as mock_get:
-            mock_response = MagicMock()
-            mock_response.status_code = 200
-            mock_get.return_value = mock_response
-            assert client.ping() is True
+        with patch.object(client, '_probe_socket', return_value=True):
+            with patch("requests.Session.get") as mock_get:
+                mock_response = MagicMock()
+                mock_response.status_code = 200
+                mock_get.return_value = mock_response
+                assert client.ping() is True
 
     def test_ping_failure(self, client):
         with patch("requests.Session.get") as mock_get:

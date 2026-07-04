@@ -50,6 +50,7 @@ ENGINE = {
     "rest_api": "http://localhost:8080",
     "websocket": "ws://localhost:8081",
     "llm_bridge": "http://localhost:11434",
+    "llm_timeout_sec": 120,
     "pillar_bridge": "http://localhost:8888",
     "startup_timeout_sec": 30,
     "headless_mode": True,

@@ -247,7 +247,7 @@ def _stub_review(role: str, experiment_id: str) -> dict:
 
 def call_reviewer(role: str, experiment_id: str, spec: dict, results: dict,
                   model: str = DEFAULT_MODEL, ollama_url: str | None = None,
-                  timeout_sec: int = 30) -> dict:
+                  timeout_sec: int | None = None) -> dict:
     """Call a single LLM reviewer agent via Ollama.
 
     Args:
@@ -268,6 +268,8 @@ def call_reviewer(role: str, experiment_id: str, spec: dict, results: dict,
                 "confidence": 1.0, "issues": [f"Unknown role: {role}"], "suggestions": []}
 
     ollama_url = ollama_url or ENGINE.get("llm_bridge", "http://localhost:11434")
+    if timeout_sec is None:
+        timeout_sec = ENGINE.get("llm_timeout_sec", 120)
 
     spec_summary = _build_spec_summary(spec)
     results_summary = _build_results_summary(results) if results else "No results available."
