@@ -3,7 +3,7 @@
   "agent_name": "Veridian",
   "model": "llama3.1:8b",
   "prompt_version": "v1.2",
-  "timestamp": "2026-07-04T06:23:35.727990+00:00",
+  "timestamp": "2026-07-04T06:32:58.957867+00:00",
   "decision": "accept",
   "confidence": 0.9,
   "issues": [],

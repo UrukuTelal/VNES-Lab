@@ -85,3 +85,46 @@ jobs:
           assert verdict == 'PASS', f'CI REJECTED: {s[\"failed\"]} regressions detected'
           print('CI ACCEPTED: all status claims are authoritative')
           "
+
+  rlaaer-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: regression-suite  # run after regression suite passes
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r dev-requirements.txt
+
+      - name: Run R-LAAER tests
+        run: |
+          python -m pytest rlaaer/tests/ -v --tb=short
+
+      - name: Validate all spec.yamls
+        run: |
+          python -c "
+          import glob, sys
+          from rlaaer.validation import validate_spec
+          errors = []
+          for f in glob.glob('experiments/*/spec.yaml'):
+              ok, msg = validate_spec(f)
+              if not ok:
+                  errors.append(f'{f}: {msg}')
+          if errors:
+              for e in errors:
+                  print(f'VALIDATION ERROR: {e}')
+              sys.exit(1)
+          print(f'All {len(glob.glob(\"experiments/*/spec.yaml\"))} spec.yamls valid')
+          "
